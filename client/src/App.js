@@ -34,12 +34,13 @@ const App = () => {
       {/* <Link to='/movies/:id'></Link> */}
 
       <Switch>
-        <Route path='/'>
-          <MovieList movies={movieList} />
-        </Route>
         <Route path='/movies/:id'>
           <Movie movies={movieList}/>
         </Route>
+        <Route exact path='/'>
+          <MovieList movies={movieList} />
+        </Route>
+        
       </Switch>
     </div>
   );
